@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 contract Simple{
-string hello ="hello world!";    
+string public hello ="hello world!";    
 function get() public view returns(string memory){
 return hello;
 }
