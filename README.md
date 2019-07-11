@@ -1,5 +1,10 @@
 # HelloWorldBox
 
+## Download Box
+```sh
+truffle unbox yehia67/helloworldbox
+```
+
 ## Installation
 
 Install dependencies 
