@@ -9,7 +9,7 @@ truffle unbox yehia67/helloworldbox
 
 Install dependencies 
 ```sh
-npm init
+npm install
 ```
 OS X & Linux:
 
