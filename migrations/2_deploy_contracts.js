@@ -1,5 +1,5 @@
-var Simple = artifacts.require("./Simple.sol");
+var Hello = artifacts.require("./Hello.sol");
 
 module.exports = function(deployer) {
-    deployer.deploy(Simple);
+    deployer.deploy(Hello);
 };

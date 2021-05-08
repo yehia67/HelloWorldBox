@@ -1,12 +1,12 @@
-const simple = artifacts.require('./Simple.sol')
+const Hello = artifacts.require('./Hello.sol')
 
-contract('Simple', (accounts) => {
+contract('Hello', (accounts) => {
     before(async() => {
-        this.Simple = await simple.deployed()
+        this.Hello = await Hello.deployed()
     })
 
     it('deploys successfully', async() => {
-        const address = await this.Simple.address
+        const address = await this.Hello.address
         assert.notEqual(address, 0x0)
         assert.notEqual(address, '')
         assert.notEqual(address, null)
@@ -15,14 +15,14 @@ contract('Simple', (accounts) => {
 
 
     it('Set Function work well', async() => {
-        const simple = await this.Simple.set("Simple Contract")
-        const Hello = await this.Simple.hello()
-        assert.equal(Hello, "Simple Contract")
+        const Hello = await this.Hello.set("Hello Contract")
+        const Hello = await this.Hello.hello()
+        assert.equal(Hello, "Hello Contract")
     })
     it('Get Function work well', async() => {
-        const simple = await this.Simple.set("Simple Contract")
-        const Hello = await this.Simple.get()
-        assert.equal(Hello, "Simple Contract")
+        const Hello = await this.Hello.set("Hello Contract")
+        const Hello = await this.Hello.get()
+        assert.equal(Hello, "Hello Contract")
     })
 
 

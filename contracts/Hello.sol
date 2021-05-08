@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract Simple{
+contract Hello{
 string public hello ="hello world!";    
 function get() public view returns(string memory){
 return hello;

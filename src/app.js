@@ -48,21 +48,21 @@ App = {
 
     loadContract: async() => {
         // Create a JavaScript version of the smart contract
-        const Simple = await $.getJSON('Simple.json')
-        App.contracts.Simple = TruffleContract(Simple)
-        App.contracts.Simple.setProvider(App.web3Provider)
+        const Hello = await $.getJSON('Hello.json')
+        App.contracts.Hello = TruffleContract(Hello)
+        App.contracts.Hello.setProvider(App.web3Provider)
 
         // Hydrate the smart contract with values from the blockchain
-        App.Simple = await App.contracts.Simple.deployed()
+        App.Hello = await App.contracts.Hello.deployed()
     },
     getvalue: async() => {
-        var value = await App.Simple.get()
+        var value = await App.Hello.get()
         $('#getValue').html(value)
 
     },
     setValue: async() => {
         var value = $('#setValue').val()
-        await App.Simple.set(value)
+        await App.Hello.set(value)
     }
 
 }
